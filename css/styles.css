@@ -3,6 +3,9 @@
 *::after {
     box-sizing: border-box;
 }*/
+.hide {
+    display: none;
+  }
 
 body {
     font-family: Roboto, sans-serif;
@@ -62,7 +65,7 @@ textarea {
 }
 
 .container {
-    min-width: 320px;
+    max-width: 320px;
     padding-left: 16px;
     padding-right: 16px;
     margin-left: auto;
@@ -260,19 +263,57 @@ textarea {
 /*FEATURE*/
 
 .feature {
-    padding: 120px 0;
 }
+
+@media screen and (max-width: 1157px) {
+    .feature {
+      padding: 96px 0;
+    }
+  }
+  
+  @media screen and (min-width: 1158px) {
+    .feature {
+      padding: 120px 0;
+    }
+  }
 
 .feature-list {
     background-color: #FFF;
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    gap: 72px;
+}
+
+@media only screen and (min-width: 768px) {
+    .feature-list{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 72px 24px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+    .feature-list{
+       flex-wrap: nowrap;
+        gap: 24px;
+  }
 }
 
 .feature-item {
     background-color: #FFF;
-    width: calc((100% - 72px) / 4);
+    /*width: calc((100% - 72px) / 4);*/
 
+}
+
+@media only screen and (min-width: 768px) {
+   .feature-item{
+    width: calc((100% - 24px) / 2);
+  }
+}
+@media only screen and (min-width: 1158px) {
+    .feature-item {
+        width: calc((100% - 72px) / 4);
+  }
 }
 
 .feature-icon {
@@ -286,23 +327,46 @@ textarea {
     margin-bottom: 8px;
 }
 
+@media screen and (max-width: 1157px) {
+    .feature-icon {
+      display: none;
+    }
+  }
+
 .feature-item-title {
     color: #2E2F42;
     font-family: Roboto, sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: 0.4px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
     margin-bottom: 8px;
+}
+
+@media only screen and (min-width: 1158px) {
+    .feature-item-title{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.4px;
+  }
 }
 
 .feature-item-text {
     color: #434455;
     font-family: Roboto, sans-serif;
+    align-self: stretch;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.32px;
+}
+
+@media only screen and (min-width: 1158px) {
+    .feature-item-text{
+        font-weight: 400; 
+  }
 }
 
 /*TEAM*/
@@ -312,13 +376,15 @@ textarea {
 }
 @media screen and (max-width: 1157px) {
     .team {
-      padding: 96px 0;
+      padding-top: 96px;
+      padding-bottom: 96px;
     }
   }
   
   @media screen and (min-width: 1158px) {
     .team {
-      padding: 120px 0;
+        padding-top: 120px;
+        padding-bottom: 120px;
     }
   }
 
@@ -337,15 +403,25 @@ textarea {
 .team-list {
     background-color: #F4F4FD;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 24px;
+    gap: 74px;
 
 }
 
 @media only screen and (min-width: 798px) {
-   {
-    
+    .team-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px 64px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+    .team-list {
+        flex-wrap: nowrap;
+        gap: 24px;
   }
 }
 
@@ -354,6 +430,18 @@ textarea {
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
+
+@media screen and (min-width: 768px) {
+    .team-item {
+      width: calc((100%-24px) / 2);
+    }
+  }
+  
+  @media screen and (min-width: 1158px) {
+    .team-item {
+      width: calc((100%-72px) / 4);
+    }
+  }
 
 .team-about {
     padding: 32px 0;
