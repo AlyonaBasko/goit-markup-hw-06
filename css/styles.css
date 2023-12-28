@@ -62,10 +62,28 @@ textarea {
 }
 
 .container {
-    width: 1158px;
-    margin: 0 auto;
-    padding: 0 15px;
+    min-width: 320px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: auto;
+    margin-right: auto;
+   
+    outline: 2px solid red;
+  outline-offset: -2px;
 }
+
+@media screen and (min-width: 768px) {
+    .container {
+      max-width: 768px;
+    }
+  }
+  @media screen and (min-width: 1158px) {
+    .container {
+      max-width: 1158px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
 
 /*HEADER*/
 
@@ -291,14 +309,44 @@ textarea {
 
 .team {
     background-color: #F4F4FD;
-    padding: 120px 0;
+}
+@media screen and (max-width: 1157px) {
+    .team {
+      padding: 96px 0;
+    }
+  }
+  
+  @media screen and (min-width: 1158px) {
+    .team {
+      padding: 120px 0;
+    }
+  }
+
+  .team-title {
+    color: #2E2F42;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+    margin-bottom: 72px;
 }
 
 .team-list {
     background-color: #F4F4FD;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 24px;
 
+}
+
+@media only screen and (min-width: 798px) {
+   {
+    
+  }
 }
 
 .team-item {
@@ -311,17 +359,7 @@ textarea {
     padding: 32px 0;
 }
 
-.team-title {
-    color: #2E2F42;
-    text-align: center;
-    font-family: Roboto, sans-serif;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.11;
-    letter-spacing: 0.72px;
-    text-transform: capitalize;
-    margin-bottom: 72px;
-}
+
 
 .team-item-name {
     color: #2E2F42;
@@ -661,11 +699,11 @@ textarea {
     pointer-events: none;
 } 
 
-.backdrop.is-open {
+/*.backdrop.is-open {
     opacity: 1;
     visibility: visible;
     pointer-events: initial;
-}
+}*/
 
 .modal {
     position: absolute;
