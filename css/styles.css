@@ -907,12 +907,6 @@ textarea {
     margin-bottom: 16px;
 }
 
-@media only screen and (min-width: 768px) {
-    .footer-subscrib {
-      max-width: 453px;
-      width: 100%;
-    }
-  }
 
   .footer-subscrib-form {
     display: flex;
@@ -948,9 +942,16 @@ textarea {
     padding-left: 16px;
     color: #fff;
     background-color: transparent;
-    outline: transparent;
+    outline: none;
     opacity: 0.3;  
 }
+
+@media screen and (min-width: 768px) {
+  .subscribe-form-input {
+    width: 264px;
+  }
+}
+
 
 
 .subscribe-form-input::placeholder {
@@ -965,8 +966,8 @@ textarea {
     min-width: 165px;
     height: 40px;
     border-radius: 4px;
-    background: #4D5AE5;
-    display: inline-flex;
+    background-color: #4D5AE5;
+    display: flex;
     padding: 8px 24px;
     justify-content: center;
     align-items: center;
@@ -978,6 +979,8 @@ textarea {
     border: none;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .form-button:hover,
